@@ -50,7 +50,7 @@ export class CartService {
     }
 
     removeQuantity(item: CartItem): void {
-        let itemToRemove: CartItem | undefined;
+        let itemToRemove!: CartItem;
 
         let filteredItems = this.cart.value.items.map((_item) => {
             if (_item.id === item.id) {
