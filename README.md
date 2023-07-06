@@ -1,27 +1,30 @@
-# StripeWebshop
+Stripe webshop
+This is a e-commerce web application built using the Angular framework. It provides users with a comprehensive catalog of goods that can be easily filtered and sorted. With a user-friendly interface and seamless integration of essential features like a shopping cart and secure checkout using Stripe, webshop offers a seamless shopping experience for customers.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+[DEMO LINK](https://alexanderkolomiiets.github.io/stripe-webshop/)
 
-## Development server
+Features
+Goods Catalog: Explore a wide range of products available in the catalog. The catalog provides convenient filtering and sorting options, allowing users to quickly find the desired goods based on category.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Shopping Cart: Add products to your shopping cart with just a few clicks. The cart displays the selected goods along with their quantities, prices, and total amounts. You can easily increase or decrease the quantity of items in the cart, providing flexibility and control over your purchase.
 
-## Code scaffolding
+Cart Management: Clear the entire shopping cart with a single action. If you change your mind about the items in the cart, you can easily remove them all at once, allowing you to start fresh or add different products.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Secure Checkout: Complete your purchase with confidence using the secure Stripe checkout integration. WebCatalog ensures that your payment information is protected and guarantees a safe transaction process.
 
-## Build
+Technologies Used
+Stripe webshop is built using the following technologies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Angular: A popular and robust JavaScript framework for building web applications.
+Stripe: A secure payment processing platform that enables smooth and reliable transactions.
+HTML/CSS: Standard web technologies used for structuring and styling the application.
+Getting Started
+To run Stripe webshop locally on your machine, follow these steps:
 
-## Running unit tests
+Clone the repository from GitHub: git clone https://github.com/AlexanderKolomiiets/stripe-webshop.git
+Navigate to the project directory: cd stripe-webshop
+Install the dependencies: npm install
+Configure the Stripe integration by providing your Stripe API keys.
+Build and run the application: ng serve
+Open your web browser and visit http://localhost:4200 to access Stripe webshop.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
