@@ -2,7 +2,7 @@
 
 This is a e-commerce web application built using the Angular framework. It provides users with a comprehensive catalog of goods that can be easily filtered and sorted. With a user-friendly interface and seamless integration of essential features like a shopping cart and secure checkout using Stripe, webshop offers a seamless shopping experience for customers.
 
-[DEMO LINK](https://alexanderkolomiiets.github.io/stripe-webshop/)
+[DEMO LINK](https://alexanderkolomiiets.github.io/stripe-webshop/) (without Stripe on checkout)
 
 ## Features
 
@@ -29,10 +29,7 @@ To run Stripe webshop locally on your machine, follow these steps:
 1. Clone the repository from GitHub: `git clone https://github.com/AlexanderKolomiiets/stripe-webshop.git`
 2. Navigate to the project directory: `cd stripe-webshop`
 3. Install the dependencies: `npm install`
-4. Configure the Stripe integration by providing your Stripe API keys.
+4. Configure the Stripe integration by providing your private and public Stripe API keys inside `server/server.js` and `cart.component.ts` respectively.
 5. Build and run the application: `ng serve`
-6. Open your web browser and visit `http://localhost:4200` to access Stripe webshop.
-
-# WebCatalog
-
-WebCatalog is a powerful e-commerce web application built using the Angular framework. It provides users with a comprehensive catalog of goods that can be easily filtered, sorted, and displayed with customizable pagination. With a user-friendly interface and seamless integration of essential features like a shopping cart and secure checkout using Stripe, WebCatalog offers a seamless shopping experience for customers.
+6. Run the server in terminal `node server/server.js` 
+7. Open your web browser and visit `http://localhost:4200` to access Stripe webshop.
