@@ -1,0 +1,27 @@
+<mat-card class="text-center">
+    <div class="flex p-8">
+        <img
+            class="mb-1 mx-auto h-[360px]"
+            [src]="product.image"
+        />
+        <div
+            class="w-full p-3 px-8 flex flex-col justify-between text-lg"
+        >
+            <div>
+                <h2>{{ product.category | titlecase }}</h2>
+                <p class="truncate hover:whitespace-normal">
+                    {{ product.title }}
+                </p>
+                <p>
+                    {{ product.description }}
+                </p>
+            </div>
+            <div class="flex justify-end gap-8 items-center">
+                <span class="text-red-400">{{ product.price | currency }}</span>
+                <button (click)="onAddToCart(product)">
+                    <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</mat-card>

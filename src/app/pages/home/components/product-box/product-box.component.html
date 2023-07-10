@@ -10,9 +10,14 @@
             [ngClass]="{ 'px-8 flex flex-col justify-between': fullWidthMode }"
         >
             <div>
-                <h5>{{ product.category }}</h5>
-                <p class="truncate hover:whitespace-normal">
-                    {{ product.title }}
+                <h5>{{ product.category | titlecase }}</h5>
+                <p>
+                    <a
+                        class="hover:text-blue-500 transition-all duration-300 w-fit mx-auto cursor-pointer"
+                        routerLink="/{{product.id}}"
+                    >
+                        {{ product.title }}
+                    </a>
                 </p>
                 <p *ngIf="fullWidthMode">
                     {{ product.description }}

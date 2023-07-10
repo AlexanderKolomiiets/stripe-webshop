@@ -23,6 +23,12 @@ export class StoreService {
         );
     }
 
+    getProduct(id: number): Observable<Product> {
+        return this.httpClient.get<Product>(
+            `${STORE_BASE_URL}/products/${id}`
+        );
+    }
+
     getAllCategories(): Observable<Array<string>> {
         return this.httpClient.get<Array<string>>(
             `${STORE_BASE_URL}/products/categories`

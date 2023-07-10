@@ -25,9 +25,10 @@ import { ProductBoxComponent } from './pages/home/components/product-box/product
 import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, HomeComponent, ProductsHeaderComponent, FiltersComponent, ProductBoxComponent, CartComponent],
+    declarations: [AppComponent, HeaderComponent, HomeComponent, ProductsHeaderComponent, FiltersComponent, ProductBoxComponent, CartComponent, ProductComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
