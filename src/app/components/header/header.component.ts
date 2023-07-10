@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -7,24 +7,35 @@ import { CartService } from 'src/app/services/cart.service';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-    private _cart: Cart = { items: [] };
+export class HeaderComponent implements OnInit {
+    // private _cart: Cart = { items: [] };
+    
+    cart: Cart = { items: [] };
     itemsQuantity = 0;
 
-    @Input()
-    get cart(): Cart {
-        return this._cart;
-    }
+    // @Input()
+    // get cart(): Cart {
+    //     return this._cart;
+    // }
 
-    set cart(cart: Cart) {
-        this._cart = cart;
+    // set cart(cart: Cart) {
+    //     this._cart = cart;
 
-        this.itemsQuantity = cart.items
-            .map((item) => item.quantity)
-            .reduce((prev, current) => prev + current, 0);
-    }
+    //     this.itemsQuantity = cart.items
+    //         .map((item) => item.quantity)
+    //         .reduce((prev, current) => prev + current, 0);
+    // }
 
     constructor(private cartService: CartService) {}
+
+    ngOnInit(): void {
+        this.cartService.cart.subscribe((_cart: Cart) => {
+            this.cart = _cart;
+            this.itemsQuantity = _cart.items
+            .map((item) => item.quantity)
+            .reduce((prev, current) => prev + current, 0);
+        })
+    }
 
     getTotal(items: CartItem[]): number {
         return this.cartService.getTotal(items);
